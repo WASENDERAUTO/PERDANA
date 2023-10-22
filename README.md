@@ -3,32 +3,36 @@ Membangun proyek backend otentikasi berbasis token dengan Node.js adalah langkah
 
 Langkah 1: Menyiapkan Lingkungan
 
-Pastikan Anda telah menginstal Node.js dan npm (Node Package Manager). Anda dapat mengunduhnya dari situs web resmi: https://nodejs.org/
+1. Pastikan Anda telah menginstal Node.js dan npm (Node Package Manager). Anda dapat mengunduhnya dari situs web resmi: https://nodejs.org/
 
-Buat direktori baru untuk proyek Anda dan masuk ke dalamnya melalui terminal:
-
+2. Buat direktori baru untuk proyek Anda dan masuk ke dalamnya melalui terminal:
+```sh
 bash
 Copy code
 mkdir node-authentication-backend
 cd node-authentication-backend
-Inisialisasi proyek Node.js baru:
-
+```
+3. Inisialisasi proyek Node.js baru:
+```sh
 bash
 Copy code
 npm init
+```
 Ikuti petunjuk untuk membuat file package.json.
 
 Langkah 2: Instalasi Dependensi yang Dibutuhkan
 
 Anda akan membutuhkan beberapa package untuk mengimplementasikan otentikasi berbasis token. Berikut beberapa package umum yang diperlukan:
-
+```sh
 bash
 Copy code
 npm install express mongoose bcrypt jsonwebtoken
+```
 express: Framework aplikasi web untuk membangun API.
 mongoose: Library Object Data Modeling (ODM) untuk MongoDB.
 bcrypt: Library untuk meng-hash dan menyalt password.
 jsonwebtoken: Library untuk membuat dan memverifikasi JSON Web Tokens (JWT).
+
 Langkah 3: Mengatur Basis Data MongoDB
 
 Anda memerlukan basis data MongoDB untuk menyimpan informasi pengguna. Anda dapat membuat akun MongoDB Atlas gratis dan mengatur basis data untuk proyek Anda.
@@ -36,7 +40,7 @@ Anda memerlukan basis data MongoDB untuk menyimpan informasi pengguna. Anda dapa
 Langkah 4: Membuat Aplikasi Express
 
 Buat aplikasi Express dasar dalam sebuah file bernama app.js:
-
+```sh
 javascript
 Copy code
 // app.js
@@ -100,13 +104,15 @@ app.post('/login', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server berjalan di port 3000');
 });
+```
 Langkah 5: Memulai Server
 
 Untuk memulai server Node.js Anda, jalankan:
-
+```sh
 bash
 Copy code
 node app.js
+```
 Server Anda sekarang akan berjalan di port 3000.
 
 Langkah 6: Pengujian
