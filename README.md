@@ -1,7 +1,7 @@
 # PERDANA
 Membangun proyek backend otentikasi berbasis token dengan Node.js adalah langkah yang umum dilakukan. Di bawah ini adalah panduan langkah demi langkah untuk mengimplementasikan otentikasi berbasis token dalam proyek backend Node.js.
 
-## Langkah 1: Menyiapkan Lingkungan
+## Langkah 1: Set Up Your Environment
 
 1. Pastikan Anda telah menginstal Node.js dan npm (Node Package Manager). Anda dapat mengunduhnya dari situs web resmi: https://nodejs.org/
 
@@ -20,7 +20,7 @@ npm init
 ```
 Ikuti petunjuk untuk membuat file package.json.
 
-## Langkah 2: Instalasi Dependensi yang Dibutuhkan
+## Langkah 2: Install Required Dependencies
 
 Anda akan membutuhkan beberapa package untuk mengimplementasikan otentikasi berbasis token. Berikut beberapa package umum yang diperlukan:
 ```sh
@@ -33,11 +33,11 @@ mongoose: Library Object Data Modeling (ODM) untuk MongoDB.
 bcrypt: Library untuk meng-hash dan menyalt password.
 jsonwebtoken: Library untuk membuat dan memverifikasi JSON Web Tokens (JWT).
 
-## Langkah 3: Mengatur Basis Data MongoDB
+## Langkah 3: Set Up Your MongoDB Database
 
 Anda memerlukan basis data MongoDB untuk menyimpan informasi pengguna. Anda dapat membuat akun MongoDB Atlas gratis dan mengatur basis data untuk proyek Anda.
 
-## Langkah 4: Membuat Aplikasi Express
+## Langkah 4: Create the Express Application
 
 Buat aplikasi Express dasar dalam sebuah file bernama app.js:
 ```sh
@@ -105,7 +105,7 @@ app.listen(3000, () => {
   console.log('Server berjalan di port 3000');
 });
 ```
-## Langkah 5: Memulai Server
+## Langkah 5: Start the Server
 
 Untuk memulai server Node.js Anda, jalankan:
 ```sh
@@ -115,7 +115,7 @@ node app.js
 ```
 Server Anda sekarang akan berjalan di port 3000.
 
-## Langkah 6: Pengujian
+## Langkah 6: Testing
 
 Anda dapat menggunakan alat seperti Postman atau curl untuk menguji endpoint /register dan /login. Setelah berhasil login, Anda akan menerima JSON Web Token (JWT) yang dapat Anda sertakan dalam header untuk rute yang dilindungi guna mengotentikasi pengguna.
 
